@@ -17,10 +17,18 @@ class HomeScreen: UIView {
         return image
     }()
     
+    lazy var logoAppImageView: UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.image = UIImage(named: "LOGO")
+        image.contentMode = .scaleAspectFit
+        return image
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(backgroundImageView)
+        addSubview(logoAppImageView)
         configConstraints()
     }
     
@@ -31,10 +39,13 @@ class HomeScreen: UIView {
     private func configConstraints() {
         NSLayoutConstraint.activate([
             backgroundImageView.topAnchor.constraint(equalTo: topAnchor),
-            backgroundImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            backgroundImageView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            backgroundImageView.bottomAnchor.constraint(equalTo: topAnchor),
+            backgroundImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            backgroundImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            backgroundImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
         
+            logoAppImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
+            logoAppImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            logoAppImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
         ])
     }
 }
