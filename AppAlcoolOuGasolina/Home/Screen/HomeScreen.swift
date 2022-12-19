@@ -25,10 +25,23 @@ class HomeScreen: UIView {
         return image
     }()
     
+    lazy var startButton: UIButton = {
+        let bt = UIButton()
+        bt.translatesAutoresizingMaskIntoConstraints = false
+        bt.setTitle("Começar", for: .normal)
+        bt.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        bt.setTitleColor(.white, for: .normal)
+        bt.clipsToBounds = true
+        bt.layer.cornerRadius = 8
+        bt.backgroundColor = UIColor(red: 230/255, green: 0/255, blue: 127/255, alpha: 1.0 )
+        return bt
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(backgroundImageView)
         addSubview(logoAppImageView)
+        addSubview(startButton)
         configConstraints()
     }
     
@@ -46,6 +59,12 @@ class HomeScreen: UIView {
             logoAppImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
             logoAppImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             logoAppImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            
+            startButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -125),
+            startButton.leadingAnchor.constraint(equalTo: leadingAnchor,constant: 60),
+            startButton.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -60),
+            startButton.heightAnchor.constraint(equalToConstant: 44),
+            
         ])
     }
 }
