@@ -16,6 +16,10 @@ class HomeVC: UIViewController {
         view = screen
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         screen?.delegate(delegate: self)
@@ -25,7 +29,8 @@ class HomeVC: UIViewController {
 
 extension HomeVC: HomeScreenDelegate {
     func tappedStartButton() {
-        print(#function)
+        let vc = CalculatorVC()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }
