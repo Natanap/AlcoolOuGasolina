@@ -7,8 +7,18 @@
 
 import UIKit
 
+protocol HomeScreenDelegate: AnyObject {
+    func tappedStartButton()
+}
+
 class HomeScreen: UIView {
 
+    private weak var delegate: HomeScreenDelegate?
+    
+    public func delegate(delegate: HomeScreenDelegate?){
+        self.delegate = delegate
+    }
+    
     lazy var backgroundImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -29,13 +39,18 @@ class HomeScreen: UIView {
         let bt = UIButton()
         bt.translatesAutoresizingMaskIntoConstraints = false
         bt.setTitle("Começar", for: .normal)
-        bt.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        bt.titleLabel?.font = UIFont.systemFont(ofSize: 16 ,weight: .bold)
         bt.setTitleColor(.white, for: .normal)
         bt.clipsToBounds = true
         bt.layer.cornerRadius = 8
         bt.backgroundColor = UIColor(red: 230/255, green: 0/255, blue: 127/255, alpha: 1.0 )
+        bt.addTarget(self, action: #selector(tappedStartButton), for: .touchUpInside)
         return bt
     }()
+    
+    @objc func tappedStartButton() {
+        delegate?.tappedStartButton()
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
