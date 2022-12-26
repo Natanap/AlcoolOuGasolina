@@ -67,7 +67,7 @@ class CalculatorScreen: UIView {
         bt.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .bold)
         bt.clipsToBounds = true
         bt.layer.cornerRadius = 9
-        bt.backgroundColor = UIColor(red: 128/255, green: 128/255, blue: 128/255, alpha: 1.0)
+        bt.backgroundColor = UIColor(red: 230/255, green: 0/255, blue: 127/255, alpha: 1.0)
         bt.addTarget(self, action: #selector(tappedCalculteButton), for: .touchUpInside)
         return bt
     }()

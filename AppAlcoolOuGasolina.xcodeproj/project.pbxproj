@@ -13,9 +13,12 @@
 		2C6493E0293A6F470058C996 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C6493DF293A6F470058C996 /* Assets.xcassets */; };
 		2C6493E3293A6F470058C996 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C6493E1293A6F470058C996 /* LaunchScreen.storyboard */; };
 		2C6493ED293A722B0058C996 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6493EC293A722B0058C996 /* HomeScreen.swift */; };
+		2CBE8EAA295A67360091EC49 /* BestFuel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBE8EA9295A67360091EC49 /* BestFuel.swift */; };
 		2CE0359029537BAC00A9872D /* CalculatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE0358F29537BAC00A9872D /* CalculatorVC.swift */; };
 		2CE0359329537C1C00A9872D /* CalculatorScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE0359229537C1C00A9872D /* CalculatorScreen.swift */; };
 		2CE035962953933700A9872D /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE035952953933700A9872D /* Alert.swift */; };
+		2CE035992953996400A9872D /* ResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE035982953996400A9872D /* ResultVC.swift */; };
+		2CE0359C2953998600A9872D /* ResultScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE0359B2953998600A9872D /* ResultScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +30,12 @@
 		2C6493E2293A6F470058C996 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C6493E4293A6F470058C996 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C6493EC293A722B0058C996 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		2CBE8EA9295A67360091EC49 /* BestFuel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestFuel.swift; sourceTree = "<group>"; };
 		2CE0358F29537BAC00A9872D /* CalculatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorVC.swift; sourceTree = "<group>"; };
 		2CE0359229537C1C00A9872D /* CalculatorScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorScreen.swift; sourceTree = "<group>"; };
 		2CE035952953933700A9872D /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		2CE035982953996400A9872D /* ResultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultVC.swift; sourceTree = "<group>"; };
+		2CE0359B2953998600A9872D /* ResultScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,7 @@
 		2C6493D5293A6F450058C996 /* AppAlcoolOuGasolina */ = {
 			isa = PBXGroup;
 			children = (
+				2CE035972953994800A9872D /* Result */,
 				2CE035942953932400A9872D /* Alert */,
 				2CE0358E29537B8B00A9872D /* Calculator */,
 				2C6493EA293A71F80058C996 /* Home */,
@@ -114,6 +121,24 @@
 				2CE035952953933700A9872D /* Alert.swift */,
 			);
 			path = Alert;
+			sourceTree = "<group>";
+		};
+		2CE035972953994800A9872D /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				2CE0359A2953997100A9872D /* Screen */,
+				2CE035982953996400A9872D /* ResultVC.swift */,
+				2CBE8EA9295A67360091EC49 /* BestFuel.swift */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
+		2CE0359A2953997100A9872D /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				2CE0359B2953998600A9872D /* ResultScreen.swift */,
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,8 +212,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CE0359029537BAC00A9872D /* CalculatorVC.swift in Sources */,
+				2CE035992953996400A9872D /* ResultVC.swift in Sources */,
 				2C6493ED293A722B0058C996 /* HomeScreen.swift in Sources */,
 				2C6493DB293A6F450058C996 /* HomeVC.swift in Sources */,
+				2CE0359C2953998600A9872D /* ResultScreen.swift in Sources */,
+				2CBE8EAA295A67360091EC49 /* BestFuel.swift in Sources */,
 				2C6493D7293A6F450058C996 /* AppDelegate.swift in Sources */,
 				2C6493D9293A6F450058C996 /* SceneDelegate.swift in Sources */,
 				2CE0359329537C1C00A9872D /* CalculatorScreen.swift in Sources */,
